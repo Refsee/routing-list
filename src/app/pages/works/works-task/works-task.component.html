@@ -1,0 +1,27 @@
+<div class="container">
+    <h2 class="header-subtitle">
+      User: Mykola Kholod.
+      <span *ngIf="arrTask.length">Count of task {{ arrTask.length }}</span>
+    </h2>
+    <div class="form-group">
+      <input type="text" class="input-add" [(ngModel)]="taskName" 
+      placeholder="enter task..." />
+      <button class="btn-add" (click)="addTask()" [disabled]="!taskName">
+        Add
+      </button>
+    </div>
+    <app-item
+      [TaskList]="arrTask"
+      (changeStatus)="checkStatus($event)"
+      (deleteTask)="deleteTask($event)"
+      (editTask)="editTask($event)"
+    ></app-item>
+    <div class="edit-container form-group" *ngIf="editStatus">
+      <input type="text" class="input-add" [(ngModel)]="editTaskName" />
+      <button class="btn-add" (click)="renameTask()" [disabled]="!editTaskName">
+        Save
+      </button>
+    </div>
+  </div>
+  
+

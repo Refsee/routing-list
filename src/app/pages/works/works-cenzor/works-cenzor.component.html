@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="box-top">
+      <p class="bad-sub">Bad words:</p>
+      <p class="bad-words" *ngFor="let word of arrBadWords">
+        {{ "&nbsp;" + word }}
+      </p>
+    </div>
+    <div class="box-center">
+      <input
+        [(ngModel)]="badWord"
+        [class.error]="isInput"
+        class="input-words"
+        type="text"
+        [placeholder]="placeholderInput"
+      />
+      <button (click)="addBadWords()" class="btn btn-add">Add</button>
+      <button (click)="reset()" class="btn btn-reset">Reset</button>
+    </div>
+    <div>
+      <textarea
+        [(ngModel)]="textArea"
+        [class.error]="isArea"
+        [placeholder]="placeholderArea"
+        class="area"
+        >{{ textArea }}</textarea
+      >
+    </div>
+    <div>
+      <button (click)="textCenzor()" class="btn-cenzor">Cenzor</button>
+    </div>
+  </div>
+  
+

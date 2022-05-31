@@ -1,0 +1,21 @@
+<main>
+    <div class="links">
+        <div class="work-link">
+            Last works >>> 
+            <ul>
+                <li><a [routerLink]="['/works/cenzor']" routerLinkActive="work-link-active">Cenzor</a> 
+                </li>
+                <li><a [routerLink]="['/works/users']" routerLinkActive="work-link-active">Users</a> 
+                </li>
+                <li><a [routerLink]="['/works/task']" routerLinkActive="work-link-active">Task</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="link-home">Back to >>>
+            <a [routerLink]="['']" >Home</a>
+        </div>
+
+    </div>
+    <router-outlet></router-outlet>
+    
+</main>

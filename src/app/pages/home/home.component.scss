@@ -1,0 +1,40 @@
+.container{
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card{
+    width: 320px;
+    border-radius: 10px;
+    border: 1px solid #553333;
+    text-align: center;
+    img{
+        width: 100%;
+        border-radius: 10px;
+    }
+    p{
+        color:#831e1e;
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+    }
+    button{
+        margin: 15px 0;
+        width: 80%;
+        height: 40px;
+        font-size: 20px;
+        padding: 5px 0;
+        background-color: #35b85c;
+        border-radius: 5px;
+          
+    &:hover {
+        background-color: #8cdba4;
+      }
+    
+      &:active {
+        background-color: #05802a;
+      }
+    }
+}

@@ -1,0 +1,63 @@
+@import '../../../../assets/styles/main.scss';
+.container {
+    padding: 0 100px;
+    width: 100%;
+  }
+  
+  .header-subtitle {
+    font-size: 28px;
+    margin-top: 10px;
+  }
+  
+  .form-group {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .input-add {
+    width: 90%;
+    height: 40px;
+    padding: 5px 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: #d2f1d2;
+    &:focus{
+      box-shadow: 0 0 5px 2px #2f702f ;
+    }
+  }
+  
+  .btn-add {
+    height: 40px;
+    margin-left: 10px;
+    padding: 5px 25px;
+    background-color: #29a329;
+    font-size: 20px;
+    color: #d4ecd4;
+    border-radius: 5px;
+    box-shadow: 0 0 3px 1px #574e4e;
+  }
+  
+  .edit-container {
+    margin: 20px auto;
+    padding: 10px 25%;
+    background-color: #b4afaf;
+    input {
+      width: 70%;
+    }
+  }
+  
+  button {
+    &:hover {
+      transition: background-color 0.1s ease-in;
+      background-color: #0fa774;
+    }
+    &:active {
+      transform: scale(0.9);
+    }
+    &:disabled {
+      background-color: #6ac76a;
+      transform: scale(1);
+    }
+  }
+  

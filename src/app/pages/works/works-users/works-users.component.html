@@ -1,0 +1,83 @@
+<div class="container">
+    <div class="form-signup">
+      <form name="signup">
+        <div class="form-group">
+          <label for="login">Login</label>
+          <input
+            [(ngModel)]="login"
+            type="text"
+            name="login"
+            id="login"
+            placeholder="Enter login"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            [(ngModel)]="password"
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Enter password"
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            [(ngModel)]="email"
+            type="text"
+            name="email"
+            id="email"
+            placeholder="Enter email"
+          />
+          <p class="error" *ngIf="errorStatus" >All input fields must be filled</p>
+        </div>
+        <button
+          (click)="addUser()"
+          *ngIf="!editStatus"
+          class="btn-add"
+          type="button"
+        >
+          Add user
+        </button>
+        <button
+          (click)="saveEditUser()"
+          *ngIf="editStatus"
+          class="btn-edit-user"
+          type="button"
+        >
+          Edit user
+        </button>
+      </form>
+    </div>
+    <div class="base">
+      <table>
+        <tr class="tr-border">
+          <th>#</th>
+          <th>Login</th>
+          <th>Password</th>
+          <th>Email</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+        <tr *ngFor="let user of usersList; index as i">
+          <th>{{ i + 1 }}</th>
+          <td>{{ user.login }}</td>
+          <td>{{ user.password }}</td>
+          <td>{{ user.email }}</td>
+          <th><button (click)="editUser(i)" class="btn-edit">Edit</button></th>
+          <th>
+            <button
+              (click)="deleteUser(i)"
+              class="btn-delete"
+              [disabled]="editStatus"
+            >
+              Delete
+            </button>
+          </th>
+        </tr>
+      </table>
+    </div>
+  </div>
+  
+

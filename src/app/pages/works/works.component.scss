@@ -1,0 +1,37 @@
+.links{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px 0 50px;
+    border-bottom: 1px solid rgb(44, 23, 23);
+    font-size: 20px;
+    a{
+        text-decoration: none;
+    }
+}
+.work-link{
+    display: flex;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+
+    li{
+        padding-bottom: 20px;
+        margin: 0 10px;
+        border-bottom-color: white;
+    }
+}
+
+
+.work-link-active{
+    color: green;
+    border-bottom-color: white;
+}
+
+.link-home{
+    color: #701818;
+    a{
+        color: #701818;  
+    }
+}
